@@ -70,7 +70,7 @@ class DiscountCode extends StatelessWidget {
 
                           hintText: 'ادخل كود الخصم',
                           hintStyle: AppTextStyle.regular16
-                              .copyWith(color: AppColors.hintColor),
+                              .copyWith(color: AppColors.primaryColor),
                           border: InputBorder.none,
                         ),
                         textAlign: TextAlign.right,

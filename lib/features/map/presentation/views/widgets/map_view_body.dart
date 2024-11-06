@@ -80,6 +80,35 @@ class _MapViewBodyState extends State<MapViewBody> {
     }
   }
 
+  Future<void> _onMapTap(LatLng position) async {
+    try {
+      List<Placemark> placemarks = await placemarkFromCoordinates(
+          position.latitude, position.longitude);
+
+      String placeName = placemarks.isNotEmpty
+          ? placemarks.first.locality ?? "Unknown Location"
+          : "Unknown Location";
+
+      setState(() {
+        _markers.clear();
+        _markers.add(
+          Marker(
+            markerId: const MarkerId('tapped_location'),
+            position: position,
+            infoWindow: InfoWindow(
+              title: placeName,
+              onTap: () => _showLocationDialog(placeName, position),
+            ),
+            icon: BitmapDescriptor.defaultMarkerWithHue(
+                BitmapDescriptor.hueRed),
+          ),
+        );
+      });
+    } catch (e) {
+      print("Error: $e");
+    }
+  }
+
   void _showLocationDialog(String place, LatLng position) {
     showDialog(
       context: context,
@@ -109,23 +138,6 @@ class _MapViewBodyState extends State<MapViewBody> {
         ],
       ),
     );
-  }
-
-  void _onMapTap(LatLng position) {
-    setState(() {
-      _markers.clear();
-      _markers.add(
-        Marker(
-          markerId: const MarkerId('tapped_location'),
-          position: position,
-          infoWindow: InfoWindow(
-            title: 'Selected Location',
-            onTap: () => _showLocationDialog('Selected Location', position),
-          ),
-          icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueRed),
-        ),
-      );
-    });
   }
 
   @override
