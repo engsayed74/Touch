@@ -97,7 +97,7 @@ class _TermsConditionsBodyState extends State<TermsConditionsBody> {
                                     ),
                                   ));
                     },
-                    child: const Text(
+                    child:  Text(
                       'حفظ',
                       style: AppTextStyle.regular18,
                     ),

@@ -104,7 +104,7 @@ class _PersonViewBodyState extends State<PersonViewBody> {
                                                        Navigator.pushReplacementNamed(
                                                            context, LoginView.routeName);
                                                  },
-                                                 child: const Text(
+                                                 child:  Text(
                                                    'تحديث البيانات',
                                                    style: AppTextStyle.regular18,
                                                  ),

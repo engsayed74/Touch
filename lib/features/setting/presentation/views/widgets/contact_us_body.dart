@@ -92,7 +92,7 @@ class ContactUsBody extends StatelessWidget {
                     onPressed: () {
                       Navigator.pop(context);
                     },
-                    child: const Text(
+                    child:  Text(
                       'ارسال',
                       style: AppTextStyle.bold22,
                     ),

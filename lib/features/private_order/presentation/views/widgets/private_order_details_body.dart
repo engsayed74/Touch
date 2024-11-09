@@ -155,7 +155,7 @@ class _PrivateOrderDetailsBodyState extends State<PrivateOrderDetailsBody> {
                           foregroundColor: Colors.white,
                           backgroundColor: AppColors.primaryColor),
                       onPressed: () {},
-                      child: const Text(
+                      child:  Text(
                         'تاكيد الطلب',
                         style: AppTextStyle.bold22,
                       ),

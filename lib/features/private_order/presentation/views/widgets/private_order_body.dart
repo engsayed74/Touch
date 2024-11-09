@@ -97,7 +97,7 @@ class _PrivateOrderBodyState extends State<PrivateOrderBody> {
                                     ),
                                   ));
                     },
-                    child: const Text(
+                    child:  Text(
                       'التالى',
                       style: AppTextStyle.regular18,
                     ),
