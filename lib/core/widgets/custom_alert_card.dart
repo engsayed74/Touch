@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:touch_app/core/utils/app_colors.dart';
 import 'package:touch_app/core/utils/app_text_style.dart';
 
@@ -11,7 +12,7 @@ class CustomAlertCard extends StatelessWidget {
        shadowColor: Colors.grey.withOpacity(.2),
       elevation: 5,
       child: Container(
-        height: 90,
+        height: 90.h,
         width: double.infinity,
         padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
@@ -37,7 +38,7 @@ class CustomAlertCard extends StatelessWidget {
                     children: [
                       Text(
                         '#6695274',
-                        style: AppTextStyle.regular14
+                        style: AppTextStyle.regular11
                             .copyWith(color: AppColors.alertColor),
                       ),
                       Text(
@@ -61,7 +62,7 @@ class CustomAlertCard extends StatelessWidget {
                 Text(
                   'سيتم توصيل طلبك خلال أسبوع',
                   style:
-                      AppTextStyle.bold14.copyWith(color: AppColors.alertColor),
+                      AppTextStyle.bold11.copyWith(color: AppColors.alertColor),
                 )
               ],
             ),

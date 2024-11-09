@@ -9,7 +9,7 @@ class AlertsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: buildAppBar(context, title: 'تنبيهاتى'),
-      body: AlertsViewBody(),
+      body:const AlertsViewBody(),
     );
   }
 }

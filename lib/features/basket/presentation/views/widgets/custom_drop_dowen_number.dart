@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:touch_app/core/utils/app_colors.dart';
 import 'package:touch_app/core/utils/app_text_style.dart';
 
@@ -20,8 +21,8 @@ class _CustomDropDownButtonState extends State<CustomDropDownNumber> {
   Widget build(BuildContext context) {
     return Card(
       child: Container(
-        width: 45,
-        height: 40,
+        width: 45.w,
+        height: 40.h,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(4),
         ),

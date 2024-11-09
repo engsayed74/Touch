@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:touch_app/core/utils/app_colors.dart';
 import 'package:touch_app/core/utils/app_text_style.dart';
 
@@ -11,7 +12,7 @@ class CustomOrderCard extends StatelessWidget {
       shadowColor: Colors.grey.withOpacity(.2),
       elevation: 5,
       child: Container(
-        height: 90,
+        height: 90.h,
         width: double.infinity,
         padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
@@ -65,12 +66,12 @@ class CustomOrderCard extends StatelessWidget {
                     children: [
                       Text(
                         'ريال',
-                        style: AppTextStyle.bold12
+                        style: AppTextStyle.bold11
                             .copyWith(color: AppColors.primaryColor),
                       ),
                       Text(
                         '400',
-                        style: AppTextStyle.bold12
+                        style: AppTextStyle.bold11
                             .copyWith(color: AppColors.primaryColor),
                       ),
                     ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:touch_app/core/utils/app_colors.dart';
 import 'package:touch_app/core/utils/app_text_style.dart';
 import 'package:touch_app/core/widgets/custom_elevated_button.dart';
@@ -37,8 +38,8 @@ class FollowingOrderBody extends StatelessWidget {
                   padding: const EdgeInsets.only(bottom: 8),
                   child: Image.asset(
                     'assets/images/inbox.png',
-                    width: 100,
-                    height: 50,
+                    width: 100.w,
+                    height: 50.h,
                   ),
                 ),
                 Checkbox(
@@ -49,8 +50,8 @@ class FollowingOrderBody extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(
-              height: 8,
+             SizedBox(
+              height: 8.h,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
@@ -60,13 +61,13 @@ class FollowingOrderBody extends StatelessWidget {
                   style: AppTextStyle.bold16
                       .copyWith(color: AppColors.primaryColor),
                 ),
-                const SizedBox(
-                  width: 24,
+                 SizedBox(
+                  width: 24.w,
                 ),
                 Image.asset(
                   'assets/images/fast_delivery.png',
-                  width: 100,
-                  height: 50,
+                  width: 100.w,
+                  height: 50.h,
                 ),
                 Checkbox(
                   value: true,
@@ -76,8 +77,8 @@ class FollowingOrderBody extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(
-              height: 8,
+             SizedBox(
+              height: 8.h,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
@@ -92,8 +93,8 @@ class FollowingOrderBody extends StatelessWidget {
                 ),
                 Image.asset(
                   'assets/images/receive.png',
-                  width: 100,
-                  height: 50,
+                  width: 100.w,
+                  height: 50.h,
                 ),
                 Checkbox(
                   value: false,
@@ -101,8 +102,8 @@ class FollowingOrderBody extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(
-              height: 32,
+              SizedBox(
+              height: 32.h,
             ),
             CustomElevatedButton(
               text: 'تقييم الطلب',
@@ -111,7 +112,7 @@ class FollowingOrderBody extends StatelessWidget {
                 builder: (BuildContext context) {
                   return AlertDialog(
                     content: Container(
-                      height: 200,
+                      height: 200.h,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
@@ -137,20 +138,21 @@ class FollowingOrderBody extends StatelessWidget {
                 },
               ),
             ),
-            const SizedBox(
-              height: 16,
+           SizedBox(
+              height: 16.h,
             ),
             CustomElevatedButton(text: 'اعادة الطلب', onTap: () => null),
-            const SizedBox(
-              height: 16,
+             SizedBox(
+              height: 16.h,
             ),
             CustomElevatedButton(text: 'استرجاع', onTap: () => null),
-            const SizedBox(
-              height: 32,
+             SizedBox(
+              height: 32.h,
             ),
             Card(
               child: Container(
-                height: 70,
+                width: double.infinity,
+                height: 70.h,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   border:
@@ -160,23 +162,26 @@ class FollowingOrderBody extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Text(
-                      'المملكة العربية السعودية , منطقة مكة ',
-                      style: AppTextStyle.regular16
-                          .copyWith(color: AppColors.orderColor),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 4.0),
+                      child: Text(
+                        'المملكة العربية السعودية , منطقة مكة ',
+                        style: AppTextStyle.regular11
+                            .copyWith(color: AppColors.orderColor),
+                      ),
                     ),
                     Image.asset(
                       'assets/images/location.png',
                       color: AppColors.primaryColor,
-                      width: 30,
-                      height: 30,
+                      width: 30.w,
+                      height: 30.h,
                     )
                   ],
                 ),
               ),
             ),
-            const SizedBox(
-              height: 32,
+             SizedBox(
+              height: 32.h,
             ),
           ],
         ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:touch_app/core/utils/app_colors.dart';
 import 'package:touch_app/core/utils/app_text_style.dart';
 import 'package:touch_app/features/basket/presentation/views/widgets/custom_drop_dowen_number.dart';
@@ -11,7 +12,8 @@ class BasketCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: Container(
-        height: 150,
+        width: MediaQuery.sizeOf(context).width,
+        height: 150.h,
         padding: const EdgeInsets.all(8),
         decoration: BoxDecoration(
           //color: Colors.grey.withOpacity(.3),
@@ -90,17 +92,17 @@ class BasketCard extends StatelessWidget {
                 bottom: 0, right: 150, child: CustomDropDownSize()),
             Positioned(
               bottom: 3,
-              right: 210,
+              right: 215,
               child: Container(
-                width: 40,
-                height: 40,
+                width: 40.w,
+                height: 40.h,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12),
                     color: AppColors.primaryColor),
               ),
             ),
             const Positioned(
-                bottom: 0, right: 255, child: CustomDropDownNumber()),
+                bottom: 0, right: 265, child: CustomDropDownNumber()),
           ],
         ),
       ),
