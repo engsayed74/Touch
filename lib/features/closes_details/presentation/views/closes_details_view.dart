@@ -6,18 +6,20 @@ class ClosesDetaailsView extends StatelessWidget {
   const ClosesDetaailsView({super.key});
   static const String routeName = 'closesdetailsview';
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
-     appBar: AppBar(
+      appBar: AppBar(
         backgroundColor: AppColors.primaryColor,
         toolbarHeight: 0,
-        leading:const Visibility(visible: false,child: Icon(Icons.arrow_back_ios_new), ),
+        leading: const Visibility(
+          visible: false,
+          child: Icon(Icons.arrow_back_ios_new),
+        ),
       ),
-      body:const SafeArea(
-        child: ClosesDetailsBody(),),
+      body: const SafeArea(
+        child: ClosesDetailsBody(),
+      ),
     );
   }
 }
